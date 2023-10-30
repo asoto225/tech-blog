@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all posts and JOIN with user data
     const postData = await Post.findAll({
       include: [
         {
@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
           attributes: ['name'],
         },
       ],
+      order: [['date_created', 'DESC']],
     });
 
     // Serialize data so the template can read it
@@ -20,15 +21,14 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       posts, 
-    //   logged_in: req.session.logged_in 
-// dont think you need to be logged in to see the posts on the homepage
+      logged_in: req.session.logged_in, 
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -78,6 +78,11 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
+  return;
 });
 
 module.exports = router;
