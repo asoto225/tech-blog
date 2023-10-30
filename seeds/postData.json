@@ -1,17 +1,17 @@
 [
     {
         "title": "A really cool blog post",
-        "post": "Wow, this post is really cool!",
+        "description": "Wow, this post is really cool!",
         "date_created": "10/29/2023"
     },
     {
         "title": "A blog post",
-        "post": "This is a blog post",
+        "description": "This is a blog post",
         "date_created": "10/10/2023"
     },
     {
         "title": "Bad blog post",
-        "post": "This is a very bad blog post",
+        "description": "This is a very bad blog post",
         "date_created": "10/15/2023"
     }
 ]

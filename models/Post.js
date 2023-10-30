@@ -15,7 +15,7 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    post: {
+    description: {
       type: DataTypes.STRING,
       allowNull: false,
     },
