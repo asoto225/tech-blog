@@ -18,13 +18,13 @@
         <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary" id="createBtn">Create</button>
       </div>
     </form>
   </div>
 
   {{#if posts.length}}
-  <div class="col-md-6 project-list">
+  <div class="col-md-6 post-list">
     <h3>Current Posts:</h3>
 
     {{#each posts as |post|}}
@@ -32,13 +32,14 @@
       <div class="col-md-8">
         <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
-      </div>
+      {{!-- <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}" id="delete-Btn">DELETE</button>
+        <button class="btn btn-sm btn-warning" data-id="{{post.id}}" id="editBtn">EDIT</button>
+      </div> --}}
     </div>
     {{/each}}
   </div>
   {{/if}}
 </div>
 
-<script src="./js/profile.js"></script>
+<script src="./js/newPost.js"></script>

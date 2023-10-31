@@ -1,5 +1,12 @@
 <div class="text-center">
-  <h2>{{title}}</h2>
-  <p>{{description}}</p>
+  <h2><span id="title">Title: {{title}}</span></h2>
+  <p><span id="description"> <strong>Content:</strong> {{description}}</span></p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
 </div>
+<div class="delete-btn">
+<button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
+</div>
+<div class="edit-btn">
+<button class="btn btn-sm btn-warning" data-id="{{id}}" onclick="editPost()">EDIT</button>
+</div>
+<script src="/js/deletePost.js"></script>
