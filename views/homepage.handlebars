@@ -1,11 +1,13 @@
+
 {{#each (slice posts 0 5) as |post|}}
-<div>
-    <div>
-        <h2>{{post.title}}</h2>
-        <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+<div class="flex-column border rounded border-danger shadow-lg bg-light">
+    <div class="border-bottom bg-dark text-white">
+        <h2><strong>{{post.title}}</strong></h2>
+        <p class="d-flex justify-content-end">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
     </div>
-    <div>
+    <div class="post text-dark">
         <p>{{post.description}}</p>
     </div>
-</div>
+</div> <br> <br>
 {{/each}}
+

@@ -1,0 +1,44 @@
+body {
+    background-image: linear-gradient(to bottom right, #7DF9FF, #0892D0, #23B2EE);
+}
+
+nav a{
+    font-size: 20px;
+    color:rgba(0, 0, 0, 0.925)
+}
+
+h1 a {
+    font-size: 35px;
+    color:rgba(0, 0, 0, 0.925)
+}
+
+a:hover {
+    color:red;
+}
+
+.delete-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.post p {
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.buttons:hover {
+    background-color: #0892D0;
+    color: white;
+}
+

@@ -1,10 +1,10 @@
-<div class="row">
+<div class="d-inline-flex border rounded border-danger bg-dark text-white text-center welcome">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2><strong>Welcome, {{name}}!</strong></h2>
   </div>
 </div>
 
-<div class="row mt-4">
+<div class="row mt-4 border rounded border-danger shadow-lg bg-dark text-white mt-4 pt-2">
   <div class="col-md-6">
     <h3>Create a New Post:</h3>
 
@@ -18,7 +18,7 @@
         <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary" id="createBtn">Create</button>
+        <button type="submit" class="btn btn-outline-light buttons" id="createBtn">Create</button>
       </div>
     </form>
   </div>
@@ -30,7 +30,7 @@
     {{#each posts as |post|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
+        <h4><a href="/post/{{post.id}}"><strong><u>{{post.title}}</u></strong></a></h4>
         <p>{{post.description}}</p>
         <p>Created on {{format_date date_created}}</p>
       </div>

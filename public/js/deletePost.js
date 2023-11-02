@@ -9,9 +9,10 @@ const delButtonHandler = async (event) => {
         });
         
         if (response.ok) {
+            alert('Post deleted successfully')
             document.location.replace('/profile');
         } else {
-            alert('Failed to delete project');
+            alert('Failed to delete post');
         }
     }
 };
@@ -19,8 +20,5 @@ const delButtonHandler = async (event) => {
 document
     .querySelector('.delete-btn')
     .addEventListener('click', delButtonHandler);
-// document.addEventListener('DOMContentLoaded', () => {
-//     // Your event listener setup here
-//     document.querySelector('.post-list').addEventListener('click', delButtonHandler);
-//   });
+
   

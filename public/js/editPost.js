@@ -109,7 +109,7 @@ function editPost() {
 }
 
 async function saveChanges(titleInput, descriptionInput) {
-    const id = document.querySelector('.btn-warning').getAttribute('data-id'); // Get the post ID from the "EDIT" button
+    const id = document.querySelector('.btn-outline-warning').getAttribute('data-id'); // Get the post ID from the "EDIT" button
 
     const newTitle = titleInput.value;
     const newDescription = descriptionInput.value;
@@ -125,6 +125,7 @@ async function saveChanges(titleInput, descriptionInput) {
     });
 
     if (response.ok) {
+        alert('Post edited successfully!');
         document.location.replace('/profile');
     } else {
         alert('Failed to edit project');
